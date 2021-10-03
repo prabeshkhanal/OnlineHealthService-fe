@@ -51,8 +51,8 @@ class Header extends Component {
                       </a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="/aboutus">
-                        About Us
+                      <a class="nav-link" href="/subscription">
+                        Subscription
                       </a>
                     </li>
                     <li class="nav-item">
@@ -128,8 +128,8 @@ class Header extends Component {
                       </a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="/aboutus">
-                        About Us
+                      <a class="nav-link" href="/subscription">
+                        Subscription
                       </a>
                     </li>
                     <li class="nav-item">
@@ -153,56 +153,56 @@ class Header extends Component {
       var menu = (
         <Container>
           <Row>
-            <Col className='header-left'>
-              <img className='header-logo' src={logo} href='/' />
-              <a href='/'>OnlineHealthService</a>
+            <Col className="header-left">
+              <img className="header-logo" src={logo} href="/" />
+              <a href="/">OnlineHealthService</a>
             </Col>
-            <div className='nav nav-tabs navmenus justify-content-end'>
-              <nav class='navbar navbar-expand-lg navbar-light header-nav-bar'>
+            <div className="nav nav-tabs navmenus justify-content-end">
+              <nav class="navbar navbar-expand-lg navbar-light header-nav-bar">
                 <button
-                  class='navbar-toggler'
-                  type='button'
-                  data-toggle='collapse'
-                  data-target='#navbarSupportedContent'
-                  aria-controls='navbarSupportedContent'
-                  aria-expanded='false'
-                  aria-label='Toggle navigation'
+                  class="navbar-toggler"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#navbarSupportedContent"
+                  aria-controls="navbarSupportedContent"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation"
                 >
-                  <span class='navbar-toggler-icon'></span>
+                  <span class="navbar-toggler-icon"></span>
                 </button>
 
                 <div
-                  class='collapse navbar-collapse'
-                  id='navbarSupportedContent'
+                  class="collapse navbar-collapse"
+                  id="navbarSupportedContent"
                 >
-                  <ul class='navbar-nav mr-auto'>
-                    <li class='nav-item active'>
-                      <a class='nav-link' href='/'>
-                        Home <span class='sr-only'>(current)</span>
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="/">
+                        Home <span class="sr-only">(current)</span>
                       </a>
                     </li>
-                    <li class='nav-item'>
-                      <a class='nav-link' href='/contactus'>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/contactus">
                         Contact Us
                       </a>
                     </li>
-                    <li class='nav-item'>
-                      <a class='nav-link' href='/aboutus'>
-                        About Us
+                    <li class="nav-item">
+                      <a class="nav-link" href="/subscription">
+                        Subscription
                       </a>
                     </li>
-                    <li class='nav-item'>
+                    <li class="nav-item">
                       <Button
-                        type='button'
-                        class='btn btn-primary'
-                        href='/login'
+                        type="button"
+                        class="btn btn-primary"
+                        href="/login"
                       >
                         Login
                       </Button>
                       <Button
-                        type='button'
-                        class='btn btn-primary'
-                        href='/signup'
+                        type="button"
+                        class="btn btn-primary"
+                        href="/signup"
                       >
                         Sign-Up
                       </Button>

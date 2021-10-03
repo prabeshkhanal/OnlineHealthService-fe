@@ -15,6 +15,7 @@ import UpdateProduct from './UpdateProduct';
 import AboutUs from './AboutUs';
 import Admin from './Admin';
 import Booking from './Booking';
+import Subscription from './Subscription';
 
 class Body extends Component {
   render() {
@@ -34,6 +35,7 @@ class Body extends Component {
             <Route path="/admin" exact component={Admin} />
             <Route path="/c" exact component={Cart} />
             <Route path="/booking" exact component={Booking} />
+            <Route path="/subscription" exact component={Subscription} />
             <Route
               path="/productsingledata/:id"
               exact

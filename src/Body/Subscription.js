@@ -1,54 +1,111 @@
-// import axios from "axios";
-// import { Button } from "react-bootstrap";
-// import React, { Component, state } from "react";
+import {
+  Component,
+  state,
+  inputHandler,
+  Cart,
+  IncrementItem,
+  DecrementItem,
+} from "react";
+import { Container, Row, Col, Card, Button } from "react-bootstrap";
+import asthama from "../Media/asthama.jpg";
+import diabetes from "../Media/diabetes.jpg";
+import hypertension from "../Media/hypertension1.jpg";
 
-// class Subscription extends Component {
-//   state = {
-//     product: [],
-//   };
+class Subscription extends Component {
+  state = {
+    qty: 1,
+  };
+  IncrementItem = () => {
+    this.setState({ qty: this.state.qty + 1 });
+  };
+  DecrementItem = () => {
+    this.setState({ qty: this.state.qty - 1 });
+  };
+  render() {
+    return (
+      <div className="row">
+        <div class="card-sub">
+          <img src={hypertension} class="card-img-top" alt="..." />
+          <div class="card-body-sub">
+            <h5 class="card-title-sub">Diuretics</h5>
+            <p class="card-text">Medication for hypertension</p>
+          </div>
 
-//   componentDidMount() {
-//     axios
-//       .get("http://localhost:90/product/fetch")
-//       .then((response) => {
-//         console.log(response);
-//         this.setState({
-//           product: response.data.data,
-//         });
-//       })
-//       .catch((err) => {
-//         console.log(err.response);
-//       });
-//   }
-//   render() {
-//     return (
-//       <div>
-//         <div class="container mb-3">
-//           <div className="row">
-//             {this.state.product.map((product) => {
-//               return (
-//                 <div class="col-md-3 mb-4 mt-4">
-//                   <div className="product-card-1">
-//                     <img
-//                       src={"http://localhost:90/images/" + product.pimage}
-//                       class="img img-responsive"
-//                     />
-//                     <div class="product-name">{product.pname}</div>
-//                     <div class="product-price">Nrs. {product.pprice}</div>
-//                     <div class="product-icons">
-//                       <Button href={"/productsingledata/" + product._id}>
-//                         More info...
-//                       </Button>
-//                     </div>
-//                   </div>
-//                 </div>
-//               );
-//             })}
-//           </div>
-//         </div>
-//       </div>
-//     );
-//   }
-// }
+          <input
+            className="mt-4 mb-4"
+            type="text"
+            value={this.state.qty}
+            onChange={(event) => {
+              this.setState({ qty: event.target.value });
+            }}
+          />
+          <div>
+            <Button className="pb" onClick={this.DecrementItem}>
+              -
+            </Button>
+            <Button className="pb" onClick={this.IncrementItem}>
+              +
+            </Button>
+            <Button className="mr-2 ml-2" type="button">
+              Subscribe
+            </Button>
+          </div>
+        </div>
+        <div class="card-sub">
+          <img src={diabetes} class="card-img-top" alt="..." />
+          <div class="card-body-sub">
+            <h5 class="card-title-sub">Glimepiride (Amaryl)</h5>
+            <p class="card-text">Medication for diabetes</p>
+          </div>
+          <input
+            className="mt-4 mb-4"
+            type="text"
+            value={this.state.qty}
+            onChange={(event) => {
+              this.setState({ qty: event.target.value });
+            }}
+          />
+          <div>
+            <Button className="pb" onClick={this.DecrementItem}>
+              -
+            </Button>
+            <Button className="pb" onClick={this.IncrementItem}>
+              +
+            </Button>
+            <Button className="mr-2 ml-2" type="button">
+              Subscribe
+            </Button>
+          </div>
+        </div>
+        <div class="card-sub">
+          <img src={asthama} class="card-img-top" alt="..." />
+          <div class="card-body-sub">
+            <h5 class="card-title-sub">Inhaled Corticosteroids</h5>
+            <p class="card-text">Medication for asthma</p>
+          </div>
+          <input
+            className="mt-4 mb-4"
+            type="text"
+            value={this.state.qty}
+            onChange={(event) => {
+              this.setState({ qty: event.target.value });
+            }}
+          />
+          <div>
+            <Button className="pb" onClick={this.DecrementItem}>
+              -
+            </Button>
+            <Button className="pb" onClick={this.IncrementItem}>
+              +
+            </Button>
+            <Button className="mr-2 ml-2" type="button">
+              Subscribe
+            </Button>
+          </div>
+        </div>
+      </div>
+    );
+  }
+}
 
-// export default Subscription;
+export default Subscription;
