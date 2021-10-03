@@ -5,28 +5,28 @@ import {
   Cart,
   IncrementItem,
   DecrementItem,
-} from 'react';
-import { Container, Row, Col, Card, Button } from 'react-bootstrap';
-import axios from 'axios';
+} from "react";
+import { Container, Row, Col, Card, Button } from "react-bootstrap";
+import axios from "axios";
 
 class ProductSingleData extends Component {
   state = {
-    pname: '',
-    pimage: '',
-    pccompanyname: '',
-    pdesc: '',
-    pprice: '',
-    pmadein: '',
-    pid: '',
+    pname: "",
+    pimage: "",
+    pccompanyname: "",
+    pdesc: "",
+    pprice: "",
+    pmadein: "",
+    pid: "",
     qty: 1,
     id: this.props.match.params.id,
     config: {
-      headers: { authorization: `Bearer ${localStorage.getItem('token')}` },
+      headers: { authorization: `Bearer ${localStorage.getItem("token")}` },
     },
   };
   componentDidMount() {
     axios
-      .get('http://localhost:90/product/single/' + this.state.id)
+      .get("http://localhost:90/singleProduct/" + this.state.id)
       .then((response) => {
         console.log(response.data);
         this.setState({
@@ -45,11 +45,11 @@ class ProductSingleData extends Component {
 
   Cart = (id) => {
     axios
-      .post('http://localhost:90/cart/' + id, this.state, this.state.config)
+      .post("http://localhost:90/cart/" + id, this.state, this.state.config)
       .then((response) => {
         console.log(response);
-        window.alert('Your product has been added to the cart');
-        window.location.href = '/c';
+        window.alert("Your product has been added to the cart");
+        window.location.href = "/c";
       })
       .catch((err) => {
         console.log(err.response);
@@ -71,26 +71,26 @@ class ProductSingleData extends Component {
   render() {
     return (
       <Container>
-        <div className='singleproductdata mb-4 mt-4'>
+        <div className="singleproductdata mb-4 mt-4">
           <Row>
             <Col md={3} sm={4} xs={12}>
-              <Card className='product-card'>
+              <Card className="product-card">
                 <Card.Img
-                  variant='top'
-                  src={'http://localhost:90/images/' + this.state.pimage}
+                  variant="top"
+                  src={"http://localhost:90/images/" + this.state.pimage}
                 />
-                <Card.Body className='singleMCardbody mt-4'>
+                <Card.Body className="singleMCardbody mt-4">
                   <Card.Title>{this.state.pname}</Card.Title>
                 </Card.Body>
               </Card>
             </Col>
-            <Col md={9} sm={4} xs={12} className='product-data mt-4'>
+            <Col md={9} sm={4} xs={12} className="product-data mt-4">
               <p>
-                <h1 className='mb-4'>{this.state.pname}</h1>
+                <h1 className="mb-4">{this.state.pname}</h1>
               </p>
               <p>
-                <h4 className='product-price mt-4'>
-                  {'Nrs ' + this.state.pprice}
+                <h4 className="product-price mt-4">
+                  {"Nrs " + this.state.pprice}
                 </h4>
               </p>
               <p>
@@ -99,25 +99,25 @@ class ProductSingleData extends Component {
 
               <div></div>
               <Button
-                className='mr-2'
-                type='button'
+                className="mr-2"
+                type="button"
                 onClick={this.Cart.bind(this, this.state.id)}
               >
                 Add to Cart
               </Button>
               <input
-                className='mt-4 mb-4'
-                type='text'
+                className="mt-4 mb-4"
+                type="text"
                 value={this.state.qty}
                 onChange={(event) => {
                   this.setState({ qty: event.target.value });
                 }}
               />
               <div>
-                <Button className='pb' onClick={this.DecrementItem}>
+                <Button className="pb" onClick={this.DecrementItem}>
                   -
                 </Button>
-                <Button className='pb' onClick={this.IncrementItem}>
+                <Button className="pb" onClick={this.IncrementItem}>
                   +
                 </Button>
               </div>
