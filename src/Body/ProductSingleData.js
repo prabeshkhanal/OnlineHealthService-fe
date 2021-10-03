@@ -26,7 +26,7 @@ class ProductSingleData extends Component {
   };
   componentDidMount() {
     axios
-      .get("http://localhost:90/singleProduct/" + this.state.id)
+      .get("http://localhost:90/product/single/" + this.state.id)
       .then((response) => {
         console.log(response.data);
         this.setState({

@@ -57,9 +57,9 @@ class ProductShowAll extends Component {
                       src={'http://localhost:90/images/' + product.pimage}
                       class='img img-responsive'
                     />
-                    <div class='card-body'>
-                      <h3 class='card-title'>{product.pname}</h3>
-                      <p class='card-text'>{product.pprice}</p>
+                    <div class='card-bodyshowall'>
+                      <h3 class='card-titleshowall'>{product.pname}</h3>
+                      <p class='card-textshowall'>{product.pprice}</p>
                       <button class='btn btn-outline-primary'>
                         <a href={'/productupdate/' + product._id}>Update</a>
                       </button>

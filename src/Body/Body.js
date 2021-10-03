@@ -14,6 +14,7 @@ import ProductShowAll from './ProductShowAll';
 import UpdateProduct from './UpdateProduct';
 import AboutUs from './AboutUs';
 import Admin from './Admin';
+import Booking from './Booking';
 
 class Body extends Component {
   render() {
@@ -21,24 +22,25 @@ class Body extends Component {
       <Container>
         <Row>
           <Col>
-            <Route path='/signup' exact component={Signup} />
-            <Route path='/login' exact component={Login} />
-            <Route path='/' exact component={Home} />
-            <Route path='/productadd' exact component={ProductAdd} />
+            <Route path="/signup" exact component={Signup} />
+            <Route path="/login" exact component={Login} />
+            <Route path="/" exact component={Home} />
+            <Route path="/productadd" exact component={ProductAdd} />
             {/* <Route path='/update/:id' exact component={Product} /> */}
-            <Route path='/contactus' exact component={ContactUs} />
-            <Route path='/profile' exact component={Profile} />
-            <Route path='/updateprofile/:id' exact component={UpdateProfile} />
-            <Route path='/aboutus' exact component={AboutUs} />
-            <Route path='/admin' exact component={Admin} />
-            <Route path='/c' exact component={Cart} />
+            <Route path="/contactus" exact component={ContactUs} />
+            <Route path="/profile" exact component={Profile} />
+            <Route path="/updateprofile/:id" exact component={UpdateProfile} />
+            <Route path="/aboutus" exact component={AboutUs} />
+            <Route path="/admin" exact component={Admin} />
+            <Route path="/c" exact component={Cart} />
+            <Route path="/booking" exact component={Booking} />
             <Route
-              path='/productsingledata/:id'
+              path="/productsingledata/:id"
               exact
               component={ProductSingleData}
             />
-            <Route path='/productshowall' exact component={ProductShowAll} />
-            <Route path='/productupdate/:id' exact component={UpdateProduct} />
+            <Route path="/productshowall" exact component={ProductShowAll} />
+            <Route path="/productupdate/:id" exact component={UpdateProduct} />
           </Col>
         </Row>
       </Container>

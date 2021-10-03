@@ -118,8 +118,8 @@ class Header extends Component {
                       </a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="/c">
-                        Cart
+                      <a class="nav-link" href="/booking">
+                        Booking
                       </a>
                     </li>
                     <li class="nav-item">

@@ -32,11 +32,29 @@
   border-top-right-radius: 0.25rem;
 }
 
+.card-body-booking {
+  height: 240px;
+  width: 240px;
+}
+
+.card-booking {
+  height: 240px;
+  width: 240px;
+  margin-bottom: 200px;
+  margin-top: 40px;
+  margin-right: 80px;
+  margin-left: 80px;
+}
+
+.card-title-booking {
+  padding-top: 20px;
+}
+
 /* description slider */
-.card {
+.cardshowall {
   position: relative;
 }
-.card-body {
+.card-bodyshowall {
   position: absolute;
   left: 0;
   bottom: -40px;
@@ -48,7 +66,7 @@
   border-bottom-left-radius: 0.25rem;
   border-bottom-right-radius: 0.25rem;
 }
-.card:hover .card-body {
+.card:hover .card-bodyshowall {
   bottom: 0;
   opacity: 0.8;
 }
@@ -61,8 +79,8 @@
   padding-top: 2px;
 }
 
-.navmenus{
-margin-top: 12px;
+.navmenus {
+  margin-top: 12px;
 }
 
 .header-left {
@@ -70,14 +88,13 @@ margin-top: 12px;
   font-weight: bold;
 }
 .header-left a {
- padding-top: 50px;
+  padding-top: 50px;
   float: left;
 }
 
 .header-nav-bar li {
   padding-left: 10px;
 }
-
 
 /* home page */
 a,
@@ -87,7 +104,7 @@ a:focus {
 }
 
 body {
-  background-color:#F1F2F3;
+  background-color: #f1f2f3;
 }
 
 .container-fluid,
@@ -114,9 +131,9 @@ body {
 }
 
 .product-card-1 img {
-    height: 100%;
-    width: 100%;
-    object-fit:cover;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 .product-card-1 .product-name {
@@ -147,7 +164,6 @@ body {
   font-size: 13px;
   transition: all linear 0.25s;
 }
-
 
 .product-card-1:hover img {
   filter: grayscale(100%);
@@ -358,7 +374,7 @@ div.c2 {
 }
 
 .form-control.c.message {
-	padding-bottom: 258px;
+  padding-bottom: 258px;
 }
 
 input.form-control.c {
@@ -549,30 +565,28 @@ input.form-control.c.message {
   margin-bottom: 0;
 }
 
-
 /* admin */
-.adminimg{
+.adminimg {
   width: 96%;
 }
 
-.a1{
+.a1 {
   font-weight: 700;
   font-size: 32px;
 }
 
-.a1.des{
+.a1.des {
   font-size: 16px;
   font-weight: 500;
   margin-bottom: 40px;
   margin-top: 50px;
 }
 
-.u1.des{
+.u1.des {
   font-weight: 600;
   font-size: 32px;
   margin-bottom: 40px;
 }
 
-.pb{
-  
+.pb {
 }
